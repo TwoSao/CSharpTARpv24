@@ -1,0 +1,14 @@
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\bin\Debug\net8.0\CSharpTARpv24.exe
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\bin\Debug\net8.0\CSharpTARpv24.deps.json
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\bin\Debug\net8.0\CSharpTARpv24.runtimeconfig.json
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\bin\Debug\net8.0\CSharpTARpv24.dll
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\bin\Debug\net8.0\CSharpTARpv24.pdb
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\obj\Debug\net8.0\CSharpTARpv24.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\obj\Debug\net8.0\CSharpTARpv24.AssemblyInfoInputs.cache
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\obj\Debug\net8.0\CSharpTARpv24.AssemblyInfo.cs
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\obj\Debug\net8.0\CSharpTARpv24.csproj.CoreCompileInputs.cache
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\obj\Debug\net8.0\CSharpTARpv24.dll
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\obj\Debug\net8.0\refint\CSharpTARpv24.dll
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\obj\Debug\net8.0\CSharpTARpv24.pdb
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\obj\Debug\net8.0\CSharpTARpv24.genruntimeconfig.cache
+C:\Users\illya\RiderProjects\CSharpTARpv24\CSharpTARpv24\obj\Debug\net8.0\ref\CSharpTARpv24.dll
