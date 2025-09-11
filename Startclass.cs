@@ -10,22 +10,35 @@ namespace CSharpTARpv24
     {
         public static void Main(string[] args)
         {
+            // Osa3. Ul1
             // int[] massive = Osa3.NumberProcessing.GenerateSquares(-10, 10);
             // foreach (int m in massive)
             // {
             //     Console.WriteLine(m);
             // }
-            // Ülessane 2
+            
+            // Osa3. Ul2
+            //
+            // double[] arvud = Osa3.Tekstist_arvud();
+            // var tulemus = Osa3.AnalüüsiArve(arvud);
+            // Console.WriteLine($"Summa: {tulemus.Item1:F2}, keskmine {tulemus.Item2:F2}, Korrutis: {tulemus.Item3:F2}");
 
-            double[] arvud = Osa3.Tekstist_arvud();
-            var tulemus = Osa3.AnalüüsiArve(arvud);
-            Console.WriteLine($"Summa: {tulemus.Item1:F2}, keskmine {tulemus.Item2:F2}, Korrutis: {tulemus.Item3:F2}");
-
-
-            // 3. Osa Massiivid, List, Kordused
-
+            // Osa3. U3
+            
+            
+            
+            // Osa3. U4
+            Console.WriteLine("Sisesta märksõna");
+            string marksõna = Console.ReadLine();
+            string frass = Console.ReadLine();
+            Osa3.KuniMarksonani(marksõna, frass);
+            
+            // Osa3. Ul5
+            Osa3.GuessNmber();
+            
+            
+            // Osa3. Teooria Massiivid, List, Kordused
             //List<string> names = new List<string>();
-
             // for (int i = 0; i < 10; i++)
             // {
             //     Console.WriteLine($"Nimi {i+1}:");
@@ -79,14 +92,10 @@ namespace CSharpTARpv24
             //
             // Console.OutputEncoding = Encoding.UTF8;
             // Console.WriteLine("Tere! Valige toiming\n1.Pilet\n2.Pinginamer\n3.Ruut\n4.Hind\n");
-            //
+            
+            // Osa1
             // int choose  = Convert.ToInt32(Console.ReadLine());
             // Osa1.Main(choose);
-            //
-            // Osa 2
-            //
-
-
 
             // int kuu_number2;
             // Random rnd = new Random();
@@ -96,7 +105,6 @@ namespace CSharpTARpv24
             // string nimetus_aasta=Osa1.Hooaeg(kuu_number2);
             // Console.WriteLine($"{kuu_number}: {nimetus}");
             // Console.WriteLine($": {nimetus_aasta}");
-
 
             // Console.OutputEncoding = Encoding.UTF8;
             // Console.BackgroundColor = ConsoleColor.Red;
@@ -117,7 +125,7 @@ namespace CSharpTARpv24
             // Console.WriteLine(a);
             // float v = Osa1.Kalkulator(a, b);
             // Console.WriteLine(v);
-            // Osa1
+            
         }
     }
 }
