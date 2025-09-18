@@ -1,19 +1,40 @@
-﻿using System;
-
-namespace CSharpTARpv24
+﻿namespace CSharpTARpv24
 {
+    public class Isik
+    {
+        public string eesnimi;
+        public string perenimi = "Tundmatu";
+        public int synniaasta = 2000;
+
+        public Isik()
+        {
+        }
+
+        public Isik(string eesnimi, string perenimi)
+        {
+            this.eesnimi = eesnimi;
+            this.perenimi = perenimi;
+        }
+
+        public void Prindi_andmed()
+        {
+            Console.WriteLine($"Isiku andmed: {eesnimi} {perenimi}, Sündinud: {synniaasta}");
+        }
+    }
+
     public class Osa3
     {
-        internal class NumberProcessing
+        internal class ArvuTootlus // # osa3 ulesanne 1
         {
-            public static int[] GenerateSquares(int min, int max)
+            public static int[] GenereeriRuudud(int min, int max)
             {
-                Random random = new Random();
-                int m = random.Next(min, max);
-                int n = random.Next(min, max);
+                Random rnd = new Random();
+                int m = rnd.Next(min, max);
+                int n = rnd.Next(min, max);
                 Console.WriteLine(m);
                 Console.WriteLine(n);
                 Console.WriteLine(Math.Abs(m - n) + 1);
+
                 int[] massive = new int[Math.Abs(m - n) + 1];
                 int k = 0;
 
@@ -21,7 +42,6 @@ namespace CSharpTARpv24
                 {
                     for (int i = m; i <= n; i++)
                     {
-
                         massive[k] = i * i;
                         k++;
                     }
@@ -36,20 +56,20 @@ namespace CSharpTARpv24
                 }
 
                 return massive;
-
-
             }
-
-
         }
+    }
 
-        public static double[] Tekstist_arvud()
+    public class Osa33
+    {
+        public static double[] Tekstist_arvud() // #osa3 ulesanne 2
         {
             Console.WriteLine("Sisesta arvud koma või tühikuga eraldatult: ");
             string sisend = Console.ReadLine();
-            char[] eraldajad = new char[] { ' ' }; //
+            char[] eraldajad = new char[] { ' ' };
 
             string[] osad = sisend.Split(eraldajad, StringSplitOptions.RemoveEmptyEntries);
+
             double[] arvud = new double[osad.Length];
             for (int i = 0; i < osad.Length; i++)
             {
@@ -59,20 +79,35 @@ namespace CSharpTARpv24
             return arvud;
         }
 
-        public static Tuple<double, double, double> AnalüüsiArve(double[] arvud)
+        public class Inimene // #osa3 ulesanne 3
         {
-            double summa = arvud.Sum();
-            double keskmine = arvud.Average();
-            double korrutis = 1;
-            foreach (double arv in arvud)
-            {
-                korrutis *= arv;
-            }
+            public string Nimi;
+            public int Vanus;
 
-            return Tuple.Create(keskmine, korrutis, summa);
+            public Inimene(string nimi, int vanus)
+            {
+                Nimi = nimi;
+                Vanus = vanus;
+            }
         }
 
-        public static string KuniMarksonani(string märksõna, string frass)
+        public static class Statistika
+        {
+            public static void TeeStatistika(List<Inimene> inimesed)
+            {
+                int summa = inimesed.Sum(x => x.Vanus);
+                double keskmine = inimesed.Average(x => x.Vanus);
+                Inimene vanim = inimesed.OrderByDescending(x => x.Vanus).First();
+                Inimene noorim = inimesed.OrderBy(x => x.Vanus).First();
+
+                Console.WriteLine("Vanuste summa: " + summa);
+                Console.WriteLine("Keskmine vanus: " + keskmine);
+                Console.WriteLine("Vanim inimene: " + vanim.Nimi + ", " + vanim.Vanus + " aastat");
+                Console.WriteLine("Noorim inimene: " + noorim.Nimi + ", " + noorim.Vanus + " aastat");
+            }
+        }
+
+        public static string KuniMarksonani(string märksõna, string frass) // #osa3 ulesanne 4
         {
             do
             {
@@ -83,59 +118,38 @@ namespace CSharpTARpv24
             return frass;
         }
 
-        public static void GuessNmber()
+        public static void Arvanumber() // #osa3 ulesanne 5
         {
-            Random random = new Random();
+            Random rnd = new Random();
+            int n = rnd.Next(1, 3);
+            int attempt = 5;
 
-            while (true)
+            while (attempt > 0)
             {
+                Console.WriteLine("Sisesta number : ");
+                int number = int.Parse(Console.ReadLine());
 
-                int n = random.Next(1, 3);
-                int k = 5;
-                while (k >= 0)
+                if (number == n)
                 {
-                    Console.WriteLine("Sisesta number");
-                    int number = int.Parse(Console.ReadLine());
-                    if (number == n)
-                    {
-                        Console.WriteLine("See on õige number");
-                        break;
-                    }
-                    else if (number < n)
-                    {
-                        Console.WriteLine("Sina number väikem");
-                        k--;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Sina number suurem");
-                        k--;
-                    }
-
-
-
+                    Console.WriteLine("See on õige number");
+                    return;
+                }
+                else if (number < n)
+                {
+                    Console.WriteLine("See number väikse");
+                }
+                else
+                {
+                    Console.WriteLine("See number suurem");
                 }
 
-                Console.WriteLine("Kas veel kord?");
-                string kord = Console.ReadLine();
-                if (kord.ToLower() == "y")
-                {
-                    continue;
-                }
-                else if (kord.ToLower() == "n")
-                {
-                    break;
-                }
-
+                attempt--;
             }
 
-            Console.WriteLine("Mängu lõpu");
-
-
-
+            Console.WriteLine("Proovid said otsa! Õige number oli: " + n);
         }
 
-        public static int SuurimNeljarv(double[] arvud)
+        public static int SuurimNeljarv(double[] arvud) // #osa3 ulesanne 6
         {
             foreach (double num in arvud)
             {
@@ -145,7 +159,6 @@ namespace CSharpTARpv24
                     return -1;
                 }
             }
-
             Array.Sort(arvud);
             Array.Reverse(arvud);
             int suurim = 0;
@@ -156,41 +169,25 @@ namespace CSharpTARpv24
 
             return suurim;
         }
-
-
-        public static void GenereeriKorrutustabel()
+        public static int[,] GenereeriKorrutustabel(int ridadeArv, int veergudeArv) // #osa3 ulesanne 7
         {
-            while (true)
+            int[,] tabel = new int[ridadeArv, veergudeArv];
+            for (int i = 0; i < ridadeArv; i++)
             {
-                int RowNumber = Convert.ToInt32(Console.ReadLine());
-                int ColumnNumber = Convert.ToInt32(Console.ReadLine());
-                int[,] numbers = new int[RowNumber, ColumnNumber];
-
-                // Заполняем таблицу
-                for (int i = 0; i < RowNumber; i++)
+                for (int j = 0; j < veergudeArv; j++)
                 {
-                    for (int j = 0; j < ColumnNumber; j++)
-                    {
-                        numbers[i, j] = i * j;
-                    }
+                    tabel[i, j] = (i + 1) * (j + 1);
                 }
-
-                // Выводим в виде таблицы
-                for (int i = 1; i < RowNumber; i++)
-                {
-                    for (int j = 1; j < ColumnNumber; j++)
-                    {
-                        Console.Write(numbers[i, j].ToString().PadLeft(4)); // выравнивание по столбцам
-                    }
-                    Console.WriteLine();
-                }
-                break;
-                
             }
-
-            
+            for (int i = 0; i < ridadeArv; i++)
+            {
+                for (int j = 0; j < veergudeArv; j++)
+                {
+                    Console.Write(tabel[i, j].ToString().PadLeft(5));
+                }
+                Console.WriteLine();
+            }
+            return tabel;
         }
-
-        
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSharpTARpv24")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e605ff4a0628776ccfd96d36fdf05c7c6b0d37c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e9fd88956fa58e2f7d7af509cda4787b30f1300")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSharpTARpv24")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSharpTARpv24")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
